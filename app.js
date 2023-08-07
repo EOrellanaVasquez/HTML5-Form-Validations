@@ -48,35 +48,35 @@ myForm.addEventListener("submit", e => {
     }
 
     //firstName
-    if (firstName.value === "" || /^\s+$/.test(firstName.value)) {
+    if (/[^a-zA-Z0-9\s]/.test(firstName.value) || firstName.value =="") {
         firstName.style.backgroundColor = "#FF9595";
         divAlert.style.backgroundColor = "#FF9595";
-        divAlert.innerHTML = "<p>Some fields are missing</p>";
+        divAlert.innerHTML = "<p>Special characters are not allowed</p>";
     }
 
     //lastName
-    if (lastName.value == "" || /^\s+$/.test(lastName.value)) {
+    if (/[^a-zA-Z0-9\s]/.test(lastName.value) || lastName.value =="") {
         lastName.style.backgroundColor = "#FF9595";
         divAlert.style.backgroundColor = "#FF9595";
         divAlert.innerHTML = "<p>Some fields are missing</p>";
     }
 
     //cityName
-    if (cityName.value == "" || /^\s+$/.test(cityName.value)) {
+    if (/[^a-zA-Z0-9\s]/.test(cityName.value) || cityName.value == "") {
         cityName.style.backgroundColor = "#FF9595";
         divAlert.style.backgroundColor = "#FF9595";
         divAlert.innerHTML = "<p>Some fields are missing</p>";
     }
 
     //postalCodeNumber
-    if (postalCodeNumber.vale == "") {
+    if (postalCodeNumber.value == "") {
         postalCodeNumber.style.backgroundColor = "#FF9595";
         divAlert.style.backgroundColor = "#FF9595";
         divAlert.innerHTML = "<p>Some fields are missing</p>";
     }
 
     //stateName
-    if (stateName.vale == "Select a state") {
+    if (stateName.value == "Select a state") {
         stateName.style.backgroundColor = "#FF9595";
         divAlert.style.backgroundColor = "#FF9595";
         divAlert.innerHTML = "<p>Some fields are missing</p>";
